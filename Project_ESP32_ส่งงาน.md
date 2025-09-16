@@ -1,6 +1,6 @@
----
+
 โค้ด
----
+
 
 ---
 #include "freertos/FreeRTOS.h"
@@ -79,5 +79,6 @@ void app_main(void) {
 
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS)); // delay extra รอบ
     }
+    
 }
 
