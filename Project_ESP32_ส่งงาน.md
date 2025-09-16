@@ -1,24 +1,11 @@
-
-โค้ด
-
-
----
 #include "freertos/FreeRTOS.h"
-
 #include "freertos/task.h"
-
 #include "driver/gpio.h"
 
----
 #define LED_GPIO_2   GPIO_NUM_2
-
 #define LED_GPIO_0   GPIO_NUM_0
-
 #define LED_GPIO_4   GPIO_NUM_4
-
 #define DELAY_MS     500
-
-
 
 void app_main(void) {
     gpio_config_t io_conf = {
@@ -29,56 +16,49 @@ void app_main(void) {
         .intr_type = GPIO_INTR_DISABLE,
     };
     gpio_config(&io_conf);
-    
--
+
     while (1) {
-        
+        // LED GPIO2
         gpio_set_level(LED_GPIO_2, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_2, 0);
 
-        
+        // LED GPIO4
         gpio_set_level(LED_GPIO_4, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_4, 0);
 
-        
+        // LED GPIO0
         gpio_set_level(LED_GPIO_0, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_0, 0);
 
-        
+        // LED GPIO4
         gpio_set_level(LED_GPIO_4, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_4, 0);
 
-        
+        // LED GPIO2
         gpio_set_level(LED_GPIO_2, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_2, 0);
 
-        
-        gpio_set_level(LED_GPIO_4, 1);
-        vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
-        gpio_set_level(LED_GPIO_4, 0);
-
-        
+        // LED GPIO0
         gpio_set_level(LED_GPIO_0, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_0, 0);
 
-        
+        // LED GPIO4
         gpio_set_level(LED_GPIO_4, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_4, 0);
 
+        // LED GPIO2
         gpio_set_level(LED_GPIO_2, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_2, 0);
 
-
-        vTaskDelay(pdMS_TO_TICKS(DELAY_MS)); 
+        // Extra delay
+        vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
     }
-    
 }
-
