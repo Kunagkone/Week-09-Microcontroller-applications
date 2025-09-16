@@ -11,10 +11,15 @@
 
 ---
 #define LED_GPIO_2   GPIO_NUM_2
+
 #define LED_GPIO_0   GPIO_NUM_0
+
 #define LED_GPIO_4   GPIO_NUM_4
+
 #define DELAY_MS     500
+
 ---
+
 void app_main(void) {
     gpio_config_t io_conf = {
         .pin_bit_mask = (1ULL << LED_GPIO_2) | (1ULL << LED_GPIO_0) | (1ULL << LED_GPIO_4),
@@ -24,6 +29,7 @@ void app_main(void) {
         .intr_type = GPIO_INTR_DISABLE,
     };
     gpio_config(&io_conf);
+    
 ---
     while (1) {
         // LED GPIO2
