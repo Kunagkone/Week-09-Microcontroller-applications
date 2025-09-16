@@ -18,7 +18,7 @@
 
 #define DELAY_MS     500
 
----
+
 
 void app_main(void) {
     gpio_config_t io_conf = {
@@ -30,7 +30,7 @@ void app_main(void) {
     };
     gpio_config(&io_conf);
     
----
+-
     while (1) {
         // LED GPIO2
         gpio_set_level(LED_GPIO_2, 1);
