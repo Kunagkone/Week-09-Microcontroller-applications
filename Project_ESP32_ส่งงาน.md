@@ -32,42 +32,42 @@ void app_main(void) {
     
 -
     while (1) {
-        // LED GPIO2
+        
         gpio_set_level(LED_GPIO_2, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_2, 0);
 
-        // LED GPIO4
+        
         gpio_set_level(LED_GPIO_4, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_4, 0);
 
-        // LED GPIO0
+        
         gpio_set_level(LED_GPIO_0, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_0, 0);
 
-        // LED GPIO4
+        
         gpio_set_level(LED_GPIO_4, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_4, 0);
 
-        // LED GPIO2
+        
         gpio_set_level(LED_GPIO_2, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_2, 0);
 
-        // LED GPIO0
+        
         gpio_set_level(LED_GPIO_4, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_4, 0);
 
-        // LED GPIO4
+        
         gpio_set_level(LED_GPIO_0, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_0, 0);
 
-        // LED GPIO2
+        
         gpio_set_level(LED_GPIO_4, 1);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
         gpio_set_level(LED_GPIO_4, 0);
@@ -77,7 +77,7 @@ void app_main(void) {
         gpio_set_level(LED_GPIO_2, 0);
 
 
-        vTaskDelay(pdMS_TO_TICKS(DELAY_MS)); // delay extra รอบ
+        vTaskDelay(pdMS_TO_TICKS(DELAY_MS)); 
     }
     
 }
